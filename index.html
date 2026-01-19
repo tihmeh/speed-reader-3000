@@ -90,6 +90,7 @@
     <label>WPM</label>
     <input id="wpm" type="number" value="300">
     <button onclick="start()">Read</button>
+    <button onclick="clearText()">Clear</button>
   </div>
 
   <div id="reader" class="reader">Ready</div>
@@ -118,8 +119,15 @@
       document.getElementById("reader").textContent = words[i++];
     }, 60000 / wpm);
   }
+
+  function clearText() {
+    clearInterval(timer);
+    document.getElementById("textInput").value = "";
+    document.getElementById("reader").textContent = "Ready";
+  }
 </script>
 
 </body>
 </html>
+
 
