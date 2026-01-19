@@ -48,7 +48,7 @@
     }
 
     input {
-      width: 90px;
+      width: 110px;
       padding: 8px;
       font-size: 16px;
       border-radius: 6px;
@@ -92,7 +92,13 @@
 
   <div class="controls">
     <label>WPM</label>
-    <input id="wpm" type="number" value="300">
+    <input
+      id="wpm"
+      type="number"
+      value="300"
+      step="50"
+      min="50"
+    >
     <button onclick="start()">Read</button>
     <button onclick="clearText()">Clear</button>
   </div>
